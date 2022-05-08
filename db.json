@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "text": "Take test",
+      "day": "friday",
+      "reminder": false,
+      "id": 1
+    },
+    {
+      "text": "Play gta v online",
+      "day": "sadasdasd",
+      "reminder": true,
+      "id": 2
+    },
+    {
+      "text": "asdadsda",
+      "day": "asdasd",
+      "reminder": true,
+      "id": 3
+    },
+    {
+      "text": "Meet Aymen",
+      "day": "Saturday",
+      "reminder": false,
+      "id": 4
+    },
+    {
+      "text": "hi",
+      "day": "aasdasd",
+      "reminder": true,
+      "id": 5
+    },
+    {
+      "text": "asdasd",
+      "day": "asdasdda",
+      "reminder": true,
+      "id": 6
+    }
+  ]
+}
