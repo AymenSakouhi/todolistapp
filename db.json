@@ -1,40 +1,38 @@
 {
   "tasks": [
     {
-      "text": "Take test",
-      "day": "friday",
-      "reminder": false,
-      "id": 1
-    },
-    {
-      "text": "Play gta v online",
-      "day": "sadasdasd",
+      "text": "Go to USA",
+      "day": "Sunday",
       "reminder": true,
       "id": 2
     },
     {
-      "text": "asdadsda",
-      "day": "asdasd",
+      "text": "Aymen",
+      "day": "Sakouhi",
       "reminder": true,
+      "id": 3
+    }
+  ],
+  "texts": [
+    {
+      "name": "Aymen",
+      "text": "I am happy with the app",
+      "id": 1
+    },
+    {
+      "name": "Preyz",
+      "text": "Can you please make it scalable and add authentification",
+      "id": 2
+    },
+    {
+      "name": "ASDADSDA",
+      "text": "sadASDASDA",
       "id": 3
     },
     {
-      "text": "Meet Aymen",
-      "day": "Saturday",
-      "reminder": false,
+      "name": "Luis",
+      "text": "I love the app actually",
       "id": 4
-    },
-    {
-      "text": "hi",
-      "day": "aasdasd",
-      "reminder": true,
-      "id": 5
-    },
-    {
-      "text": "asdasd",
-      "day": "asdasdda",
-      "reminder": true,
-      "id": 6
     }
   ]
 }

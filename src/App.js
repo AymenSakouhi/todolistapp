@@ -10,6 +10,7 @@ function App() {
   const [showAddTask, setShowAddTask] = useState(false);
 
   const [tasks, setTasks] = useState([]);
+  const [texts, setTexts] = useState([]);
 
   useEffect(() => {
     const getTasks = async () => {
@@ -17,8 +18,40 @@ function App() {
       setTasks(tasksFromServer);
     };
 
+    const getContactFormText = async () => {
+      const contactFormTextFromServer = await contactFormText();
+      setTexts(contactFormTextFromServer);
+    };
+
     getTasks();
+    getContactFormText();
   }, []);
+
+//======================== text and contact form text functions below
+
+//fetch contactFormText
+
+const contactFormText = async () => {
+    const res = await fetch("http://localhost:5000/texts");
+    const data = await res.json();
+    return data;
+  };
+
+  //add formContact to db
+  const addContactForm = async (formText) => {
+    const res = await fetch(`http://localhost:5000/texts/`, { 
+        method : 'POST',
+        headers : {
+            "Content-Type": "application/json",
+        }, 
+         body : JSON.stringify(formText)
+     });
+    
+     const data = await res.json();
+     setTexts([...texts, data]);
+
+  }
+  //======================== TASKS functions below
 
   //fetch tasks
 
@@ -27,6 +60,7 @@ function App() {
     const data = await res.json();
     return data;
   };
+  
   //fetch task
   const fetchTask = async (id) => {
     const res = await fetch(`http://localhost:5000/tasks/${id}`);
@@ -84,19 +118,20 @@ function App() {
     );
   };
 
+  
+
   return (
     <Router>
-      
-        <div className="container">
-          <Header
-            onAdd={() => setShowAddTask(!showAddTask)}
-            showAdd={showAddTask}
-          />
-          <Routes>
+      <div className="container">
+        <Header
+          onAdd={() => setShowAddTask(!showAddTask)}
+          showAdd={showAddTask}
+        />
+        <Routes>
           <Route
             path="/"
             exact
-            element={(
+            element={
               <div>
                 {showAddTask && <AddTask onAdd={addTask} />}
                 {tasks.length > 0 ? (
@@ -109,13 +144,12 @@ function App() {
                   "No tasks to show"
                 )}
               </div>
-            )}
+            }
           />
-          <Route path="/about" element={<About />} />
-          </Routes>
-          <Footer />
-        </div>
-      
+          <Route path="/about"  element={<About onAdd = {addContactForm}/>} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 }
