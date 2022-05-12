@@ -146,7 +146,7 @@ const contactFormText = async () => {
               </div>
             }
           />
-          <Route path="/about"  element={<About onAdd = {addContactForm}/>} />
+          <Route path="/about"  element={<About onAdd = {addContactForm} texts={texts}/>} />
         </Routes>
         <Footer />
       </div>

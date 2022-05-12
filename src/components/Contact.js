@@ -17,7 +17,7 @@ const Contact = ({onAdd}) => {
 
   return (
     <div>
-      <h3>you will find the form below, please contact us</h3>
+      <h3>you will find the form below to write comments to us</h3>
       <form className="add-form" onSubmit={sendForm}>
         <div className="form-control">
           <label htmlFor="">Your name here</label>

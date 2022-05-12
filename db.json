@@ -1,38 +1,33 @@
 {
   "tasks": [
     {
-      "text": "Go to USA",
-      "day": "Sunday",
+      "text": "Find a new job by the end of the year!",
+      "day": "December 2021",
       "reminder": true,
-      "id": 2
+      "id": 1
     },
     {
-      "text": "Aymen",
-      "day": "Sakouhi",
+      "text": "Go to chiropractic",
+      "day": "June 6th",
       "reminder": true,
-      "id": 3
+      "id": 2
     }
   ],
   "texts": [
     {
-      "name": "Aymen",
-      "text": "I am happy with the app",
+      "name": "Aymen Sakouhi",
+      "text": "I like the way you built this app!!",
       "id": 1
     },
     {
-      "name": "Preyz",
-      "text": "Can you please make it scalable and add authentification",
+      "name": "Max",
+      "text": "asdasdasd",
       "id": 2
     },
     {
-      "name": "ASDADSDA",
-      "text": "sadASDASDA",
+      "name": "Mohamed",
+      "text": "Hi there! Wassup! I love the app, can you please send me a free link to download it. my email is 0@132.tn",
       "id": 3
-    },
-    {
-      "name": "Luis",
-      "text": "I love the app actually",
-      "id": 4
     }
   ]
 }
